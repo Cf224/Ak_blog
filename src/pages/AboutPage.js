@@ -89,7 +89,7 @@ const AboutPage = () => {
           variants={textVariants}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          I'm Arun from Kovilpatti, Tamil Nadu. With over 2 years of hands-on experience as a software engineer, I've developed full-scale CRMs, dashboards, and mobile-first delivery apps. My work involves clean UI design, efficient backend integration, and performance-optimized features that serve real user needs.
+          I'm Arun from Kovilpatti, TamilNadu. With over 2 years of hands-on experience as a software engineer, I've developed full-scale CRMs, dashboards, and mobile-first delivery apps. My work involves clean UI design, efficient backend integration, and performance-optimized features that serve real user needs.
         </motion.p>
 
         <motion.p
