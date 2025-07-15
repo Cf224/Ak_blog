@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { motion } from 'framer-motion';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import AboutPage from './pages/AboutPage';
+import ServicesPage from './pages/ServicesPage';
+import ContactPage from './pages/ContactPage';
+import './styles/tailwind.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="font-sans scroll-smooth bg-gray-900 text-white">
+      <Header />
+      <motion.main
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+      >
+        <Home />
+        <AboutPage />
+        <ServicesPage />
+        <ContactPage />
+      </motion.main>
+      <Footer />
     </div>
   );
 }
