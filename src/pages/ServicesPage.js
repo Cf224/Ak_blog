@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const ServicesPage = () => {
-  // Animation variants for staggered effects
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -38,34 +37,29 @@ const ServicesPage = () => {
       id="services"
       className="min-h-screen relative overflow-hidden flex items-center justify-center py-20 px-6 text-white"
       style={{
-        background: 'linear-gradient(45deg, #0f172a, #1e3a8a, #701a75, #0f172a)',
-        backgroundSize: '400%',
-        animation: 'holographic 10s ease infinite',
+        background: 'linear-gradient(45deg, #1e3a8a, #4b0082, #1e3a8a)',
+        backgroundSize: '200%',
+        animation: 'techGradient 15s ease infinite',
       }}
     >
-      {/* Particle Background */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="particles" />
-      </div>
-      {/* CSS Styles */}
+      <div className="absolute inset-0 pointer-events-none circuit-bg" />
       <style>
         {`
-          @keyframes holographic {
+          @keyframes techGradient {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
           }
-          .particles {
+          .circuit-bg {
             position: absolute;
             inset: 0;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="2" fill="rgba(255,255,255,0.3)"/></svg>') repeat;
-            background-size: 20px 20px;
-            animation: particles 25s linear infinite;
-            opacity: 0.2;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.1"><path d="M10 10h80v80H10zM20 20h60m-60 20h60m-60 20h60M30 10v80M50 10v80M70 10v80" stroke="rgba(0, 255, 255, 0.3)" stroke-width="2"/></svg>') repeat;
+            background-size: 50px 50px;
+            animation: circuitFlow 30s linear infinite;
           }
-          @keyframes particles {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(-100px); }
+          @keyframes circuitFlow {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-50px, -50px); }
           }
           .neon-glow {
             text-shadow: 0 0 5px rgba(0, 255, 255, 0.8), 0 0 10px rgba(0, 255, 255, 0.6), 0 0 15px rgba(0, 255, 255, 0.4);
